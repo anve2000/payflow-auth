@@ -3,7 +3,7 @@ package main
 import (
 	"database/sql"
 	_ "github.com/lib/pq"
-	_ "github.com/mathtn/go-sqlite3"
+	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
 )
