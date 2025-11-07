@@ -40,7 +40,6 @@ func registerHandler(w http.ResponseWriter, r *http.Request) {
 	var user User
 	if err := json.NewDecoder(r.Body).Decode(&user); err != nil {
 		http.Error(w, "Invalid JSON", http.StatusBadRequest)
-		return
 	}
 
 	if user.Email == "" || user.Password == "" {
