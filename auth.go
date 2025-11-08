@@ -22,9 +22,9 @@ type User struct {
 
 var jwtSecret = []byte(os.Getenv("JWT_SECRET"));
 
-// if len(jwtSecret) == 0 {
-// 	jwtSecret = []byte("dev-secret-please-change-in-prod") // fallback for local
-// }
+if len(jwtSecret) == 0 {
+	jwtSecret = []byte("dev-secret-please-change-in-prod") // fallback for local
+}
 
 func healthHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
